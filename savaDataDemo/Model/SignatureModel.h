@@ -3,7 +3,7 @@
 //  savaDataDemo
 //
 //  Created by Admin on 2016/12/2.
-//  Copyright © 2016年 asd. All rights reserved.
+//  Copyright © 2016年 侯迎春. All rights reserved.
 //
 
 
@@ -20,7 +20,7 @@
 
 
 // 生成一条需要缓存的签名数据保存到本地，填上当前app的用户userid
-+ (void)ifNeedSavePathWithUserId:(NSString*)userId contentObj:(SignatureModel*)obj;
++ (void)ifNeedSaveFileWithUserId:(NSString*)userId contentObj:(SignatureModel*)obj;
 
 // 得到当前用户的 所有缓存签名对象组成的数组
 + (NSMutableArray<SignatureModel*>*) getSignatureModelArrayWithUserID:(NSString*)userId;

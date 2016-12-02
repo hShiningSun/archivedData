@@ -27,17 +27,18 @@
     obj.clienteleId = @"1";
     obj.signatureData = data;
     
-    [SignatureModel ifNeedSavePathWithUserId:@"1" contentObj:obj];
+    //生成 签名对象 缓存
+    [SignatureModel ifNeedSaveFileWithUserId:@"1" contentObj:obj];
     
     
     
-    //获取以前归档的数据
+    //获取以前缓存的数据
     NSMutableArray *xx = [SignatureModel getSignatureModelArrayWithUserID:@"1"];
     SignatureModel *obj1 = xx[0];
     //好了，吧obj1的数据上传
     
     
-    //这里上传成功，从保存的数据删除这一条
+    //这里上传成功，从缓存的数据删除这一条
     [SignatureModel deleteObjWithContentPathAtUserId:@"1" contentObj:obj1];
     
 }
