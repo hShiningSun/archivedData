@@ -3,7 +3,7 @@
 //  HomeForPets
 //
 //  Created by Admin on 2016/11/13.
-//  Copyright © 2016年 王静静. All rights reserved.
+//  Copyright © 2016年 侯迎春. All rights reserved.
 //
 
 //宏
