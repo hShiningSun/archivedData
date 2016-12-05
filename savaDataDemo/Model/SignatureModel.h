@@ -27,4 +27,10 @@
 
 // 删除一条缓存的签名数组
 + (void) deleteObjWithContentPathAtUserId:(NSString *)userId contentObj:(SignatureModel*)obj;
+
+// 保存一个数组
++ (void)saveFilesWithUserId:(NSString*)userId objArray:(NSMutableArray<SignatureModel*>*)objArray;
+
+// 删除一个数组
++ (void)deleteFilesWithUserId:(NSString*)userId objArray:(NSMutableArray<SignatureModel*>*)objArray;
 @end

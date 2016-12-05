@@ -189,8 +189,23 @@ static NSString * const Signature = @"Signature";
         }
 
     }
-    
+}
 
+
+//保存一个数组
++ (void)saveFilesWithUserId:(NSString*)userId objArray:(NSMutableArray<SignatureModel*>*)objArray{
+    
+    for (SignatureModel *obj in objArray) {
+        [SignatureModel deleteObjWithContentPathAtUserId:userId contentObj:obj];
+        [SignatureModel ifNeedSaveFileWithUserId:userId contentObj:obj];
+    }
+}
+
+// 删除一个数组
++ (void)deleteFilesWithUserId:(NSString*)userId objArray:(NSMutableArray<SignatureModel*>*)objArray{
+    for (SignatureModel *obj in objArray) {
+        [SignatureModel deleteObjWithContentPathAtUserId:userId contentObj:obj];
+    }
 }
 @end
 
